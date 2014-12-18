@@ -1,0 +1,16 @@
+Encryption Program Specifications:
+
+This program takes any latin alphabet text document and tranforms the characters according an algorithm.
+There are different ciphers that can be used.  The user will be given the choice to enter the cipher that
+they would like to use.  Depending on the cipher, the user will also be given the option on how to use 
+the cipher.  For exmaple, for a ceasar shift cipher, it will ask the user how many shifts they want to 
+use.  
+
+The program will have both an encryption and decryption option.  Both will ask the user for the cipher it
+will use to manipulate the text.  And it will ask for any other information that it would need to 
+decrypt the cipher text.  However, this information may be added into the text, like the first (or last) 
+numbers if it was a numbered cipher text.  
+
+
+Possible additions:
+-Brute force decryption trying all of the ciphers in the database. 

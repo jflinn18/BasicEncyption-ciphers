@@ -1,19 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="f72ef7f3-5294-4ba6-aa61-54ebbf33ed6f" name="UMLClassDiagram1" linkedPackageId="3f68421f-8e5e-4c52-a936-625b811dfa00" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="4f081114-035e-47c3-b0ca-4f808bd57914">
-      <profileInstance Id="caf8b61e-0775-494c-971e-a8f9f09abfae" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="bf648a8c-97ab-4fed-8234-19180ce6a97b">
-      <profileInstance Id="da304f7d-0bec-46af-8d4e-2613b628f31e" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+  <ownedCommentsInternal>
+    <comment Id="04eac63e-6a60-460f-9019-37e535c1a7c0">
+      <elementDefinition Id="dfac7c72-f438-43f8-bc6e-dc22221a062c" />
+      <body>Inheritance for any other type of cipher that is added.</body>
+    </comment>
+  </ownedCommentsInternal>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="8c281daf-f2d1-4f55-a10a-c4ab38c3522d" name="Main" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -105,6 +97,19 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="820ffde1-3edf-46fb-a6e2-6455e04dbfdb" name="getInputer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="778d3d69-aa76-4125-9038-f2a26d783637" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ce3d9770-78d0-4f8d-85eb-73570a9dbb7d" direction="Return" isUnique="false">
+                  <elementDefinition Id="ada92799-1b53-424b-b039-22765f87fb82" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9265723c-6d0b-4389-8ed9-7f28cd20c71f" LastKnownName="string" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -164,20 +169,7 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
-          <operation Id="eee4f155-cc14-4891-81eb-5b3e82598d52" name="Encrypt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
-            <elementDefinition Id="c97acf21-365c-4033-9284-c9fa7bf192de" />
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter Id="4c3ae25d-bd95-4a46-b91d-1658d52f8c97" direction="Return" isUnique="false">
-                  <elementDefinition Id="d4fa8841-26a4-49d7-9d24-764a109874b7" />
-                  <type_NamedElement>
-                    <referencedTypeMoniker Id="adea5500-8d15-4e06-a1c6-b7342a1e8a46" LastKnownName="void" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation Id="e6e760c5-c681-43d8-b6ab-1a21064b0812" name="Decrypt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+          <operation Id="e6e760c5-c681-43d8-b6ab-1a21064b0812" name="virtual Decrypt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
             <elementDefinition Id="3b3675ee-bab7-4087-83e4-36eca9b083f1" />
             <ownedParameters>
               <operationHasOwnedParameters>
@@ -190,6 +182,9 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation Id="b4b9cff6-6184-4d21-af79-ea8e507bdf24" name="virtual Encrypt: void" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e58b4036-c1dd-4255-99aa-be8225e5f23c" />
+          </operation>
         </ownedOperationsInternal>
       </class>
     </logicalClassDesignerModelHasTypes>
@@ -198,8 +193,41 @@
         <elementDefinition Id="744c9869-6ce0-4111-8704-334addb8116e" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="92ec33e6-5bf9-4809-9259-16e6b3da439c" name="CaesarShift" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="da385347-362a-458e-8227-76d630b79517" />
+        <generalsInternal>
+          <generalization Id="d0822a59-2e9a-4f65-ab42-2651457c4f92" isSubstitutable="false">
+            <classMoniker Id="ab2a1ec1-f7a5-4d4a-9cc8-39a65b64e489" LastKnownName="Cipher" />
+            <elementDefinition Id="34c1d770-9f45-45e0-aa69-edf5202a994b" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="6a36012c-cbd3-4846-80e0-e984a9428230" name="Decrypt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="33528519-b876-4d83-920f-32c7c6175771" />
+          </operation>
+          <operation Id="897ca0de-7423-4dd0-bbba-6d715c2d7841" name="Encrypt" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="27829442-2dc8-422a-8bdc-70be1a07753c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="3f68421f-8e5e-4c52-a936-625b811dfa00" name="ModelingProject1">
     <elementDefinition Id="8704965e-9316-4c44-98fe-c482131aa1d8" />
+    <profileInstances>
+      <packageHasProfileInstances Id="4f081114-035e-47c3-b0ca-4f808bd57914">
+        <profileInstance Id="caf8b61e-0775-494c-971e-a8f9f09abfae" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="bf648a8c-97ab-4fed-8234-19180ce6a97b">
+        <profileInstance Id="da304f7d-0bec-46af-8d4e-2613b628f31e" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

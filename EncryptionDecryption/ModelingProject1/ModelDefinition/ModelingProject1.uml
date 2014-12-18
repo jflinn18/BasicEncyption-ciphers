@@ -3,6 +3,12 @@
   dslVersion="1.0.0.0"
   Id="8704965e-9316-4c44-98fe-c482131aa1d8"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="dfac7c72-f438-43f8-bc6e-dc22221a062c">
+      <body>Inheritance for any other type of cipher that is added.</body>
+    </comment>
+  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -228,6 +234,30 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="778d3d69-aa76-4125-9038-f2a26d783637"
+            name="getInputer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ada92799-1b53-424b-b039-22765f87fb82"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="e54c47dd-8464-401b-bf7d-a4b45fc2ef44"
+                      LastKnownName="string"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -343,32 +373,8 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="c97acf21-365c-4033-9284-c9fa7bf192de"
-            name="Encrypt"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="d4fa8841-26a4-49d7-9d24-764a109874b7"
-                  direction="Return"
-                  isUnique="false">
-                  <type_NamedElement>
-                    <undefinedTypeMoniker
-                      Id="744c9869-6ce0-4111-8704-334addb8116e"
-                      LastKnownName="void"
-                      LastKnownLocation="ModelingProject1.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="3b3675ee-bab7-4087-83e4-36eca9b083f1"
-            name="Decrypt"
+            name="virtual Decrypt"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -390,6 +396,14 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="e58b4036-c1dd-4255-99aa-be8225e5f23c"
+            name="virtual Encrypt: void"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -397,6 +411,43 @@
       <undefinedType
         Id="744c9869-6ce0-4111-8704-334addb8116e"
         name="void" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="da385347-362a-458e-8227-76d630b79517"
+        name="CaesarShift"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="34c1d770-9f45-45e0-aa69-edf5202a994b"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3c39dab9-a098-4be8-aeba-c640f4cc246e"
+              LastKnownName="Cipher"
+              LastKnownLocation="ModelingProject1.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="33528519-b876-4d83-920f-32c7c6175771"
+            name="Decrypt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="27829442-2dc8-422a-8bdc-70be1a07753c"
+            name="Encrypt"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

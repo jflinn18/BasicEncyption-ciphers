@@ -273,10 +273,51 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="cd49a29e-4e80-4b7d-8333-8ccee78c6f73"
+            isDerived="false"
+            sourceEndRoleName="Cipher"
+            targetEndRoleName="Alphabet"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="42dc8c15-b902-45ab-8704-3ed8f408e125"
+              LastKnownName="Alphabet"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c9338e85-e536-4621-95f6-a22a24faeb42"
+                  name="Cipher"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a6a86586-3115-45d9-833e-51327f42d960"
+                  name="Alphabet"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="321c2514-e003-4e4c-ae97-b809c850d0c7"
-            name="string cipherText;"
+            name="string inputText"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -288,7 +329,19 @@
             isComposite="false" />
           <property
             Id="45de65be-bb16-4b33-9fb7-f7ed66bb0322"
-            name="string text;"
+            name="string outputText;"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b8ec079f-4329-4ce2-beac-f2ee4c49138b"
+            name="Alphabet a;"
             visibility="Private"
             isLeaf="false"
             isStatic="false"
@@ -447,6 +500,29 @@
             concurrency="Sequential"
             isQuery="false" />
         </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="42dc8c15-b902-45ab-8704-3ed8f408e125"
+        name="Alphabet"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="8ca6a311-4b72-4b78-9ad9-0d193cb61bfb"
+            name="vector&lt;char&gt; alpha"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
   </packagedElements>

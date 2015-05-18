@@ -21,6 +21,10 @@ void UserInterface::printMenu()
 
 	std::transform(operation.begin(), operation.end(), operation.begin(), ::tolower);
 
+
+	cout << "Which cipher would you like to use?\n";
+	getInput();
+
 }
 
 void UserInterface::getInput()
@@ -32,4 +36,9 @@ void UserInterface::getInput()
 void UserInterface::clear_cmd()
 {
 	system("cls");
+}
+
+void UserInterface::whichCipher()
+{
+	if 
 }

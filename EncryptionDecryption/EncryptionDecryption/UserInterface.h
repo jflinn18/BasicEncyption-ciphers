@@ -13,6 +13,7 @@ class UserInterface
 private:
 	string resp;
 	string operation;
+	string cipher;
 	string text;
 	std::vector<string> ciphers;
 
